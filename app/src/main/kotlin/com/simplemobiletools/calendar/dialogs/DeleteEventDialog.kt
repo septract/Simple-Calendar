@@ -12,6 +12,7 @@ import kotlinx.android.synthetic.main.dialog_delete_event.view.*
 class DeleteEventDialog(val activity: Activity, eventIds: List<Int>, val callback: (allOccurrences: Boolean) -> Unit) {
     val dialog: AlertDialog?
 
+    /* Hello! */ 
     init {
         val events = activity.dbHelper.getEventsWithIds(eventIds)
         val hasRepeatableEvent = events.any { it.repeatInterval > 0 }
